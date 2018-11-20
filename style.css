@@ -11,3 +11,7 @@ html, body {
 button {
   width: 50px;
 }
+
+.color-option {
+  height: 25px;
+}
