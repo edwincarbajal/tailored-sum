@@ -120,10 +120,10 @@
         <tr>
           <td>
             <!-- Second Row -->
-            <button type="button" class="btn btn-light">7</button>
-            <button type="button" class="btn btn-light">8</button>
-            <button type="button" class="btn btn-light">9</button>
-            <button type="button" class="btn btn-light">/</button>
+            <input type="button"class="btn btn-light" value=" 7 " onclick="calculator.answer.value += '7'" />
+            <input type="button"class="btn btn-light" value=" 8 " onclick="calculator.answer.value += '8'" />
+            <input type="button"class="btn btn-light" value=" 9 " onclick="calculator.answer.value += '9'" />
+            <input type="button"class="btn btn-light" value=" / " onclick="calculator.answer.value += '/'" />
             <!-- Second Row -->
           </td>
         </tr>
@@ -131,10 +131,10 @@
         <tr>
           <td>
             <!-- Third Row -->
-            <button type="button" class="btn btn-light">4</button>
-            <button type="button" class="btn btn-light">5</button>
-            <button type="button" class="btn btn-light">6</button>
-            <button type="button" class="btn btn-light">x</button>
+              <input type="button"class="btn btn-light" value=" 4 " onclick="calculator.answer.value += '4'" />
+              <input type="button"class="btn btn-light" value=" 5 " onclick="calculator.answer.value += '5'" />
+              <input type="button"class="btn btn-light" value=" 6 " onclick="calculator.answer.value += '6'" />
+              <input type="button"class="btn btn-light" value=" x " onclick="calculator.answer.value += '*'" />
             <!-- Third Row -->
           </td>
         </tr>
@@ -142,10 +142,10 @@
         <tr>
           <td>
             <!-- Fourth Row -->
-            <button type="button" class="btn btn-light">1</button>
-            <button type="button" class="btn btn-light">2</button>
-            <button type="button" class="btn btn-light">3</button>
-            <button type="button" class="btn btn-light">-</button>
+               <input type="button"class="btn btn-light" value=" 1 " onclick="calculator.answer.value += '1'" />
+               <input type="button"class="btn btn-light" value=" 2 " onclick="calculator.answer.value += '2'" />
+               <input type="button"class="btn btn-light" value=" 3 " onclick="calculator.answer.value += '3'" />
+               <input type="button"class="btn btn-light" value=" - " onclick="calculator.answer.value += '-'" />
             <!-- Fourth Row -->
           </td>
         </tr>
@@ -153,10 +153,10 @@
         <tr>
           <td>
             <!-- Fifth Row -->
-            <button type="button" class="btn btn-light">0</button>
-            <button type="button" class="btn btn-light">.</button>
-            <button type="button" class="btn btn-light">%</button>
-            <button type="button" class="btn btn-light">+</button>
+              <input type="button"class="btn btn-light" value=" 0 " onclick="calculator.answer.value += '0'" />
+              <input type="button"class="btn btn-light" value=" . " onclick="calculator.answer.value += '.'" />
+              <input type="button"class="btn btn-light" value=" % " onclick="calculator.answer.value += '%'" />
+              <input type="button"class="btn btn-light" value=" + " onclick="calculator.answer.value += '+'" />
             <!-- Fifth Row -->
           </td>
         </tr>
@@ -164,7 +164,7 @@
         <tr>
           <td>
             <!-- Sixth Row -->
-            <button type="button" class="btn btn-light btn-block">=</button>
+            <input type="button"class="btn btn-light" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
             <!-- Sixth Row -->
           </td>
         </tr>
