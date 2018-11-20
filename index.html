@@ -9,6 +9,9 @@
   <!-- Compiled Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
   <title>Tailored Sum</title>
 </head>
 
@@ -30,9 +33,91 @@
         </ul>
       </div>
     </div>
-    <!-- Left column -->
+    <!-- Left Column -->
+
+    <!-- Center column -->
+    <div class="col-12 col-md-6 bg-light pt-2">
+      <!-- Calculator -->
+      <table class="calculator border-top border-right border-bottom border-left">
+        <!-- Display -->
+        <tr class="display">
+          <td>
+            <h1 class="display-4 text-right pr-2 mb-0">0</h1>
+            <span class="d-block text-right pr-3 mb-1">0</span>
+          </td>
+        </tr>
+        <!-- Display -->
+
+        <!-- Buttons -->
+        <tr>
+          <td class="pt-2">
+            <!-- First Row -->
+            <button type="button" class="btn btn-light">+/-</button>
+            <button type="button" class="btn btn-light">(</button>
+            <button type="button" class="btn btn-light">)</button>
+            <button type="button" class="btn btn-danger">AC</button>
+            <!-- First Row -->
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <!-- Second Row -->
+            <button type="button" class="btn btn-light">7</button>
+            <button type="button" class="btn btn-light">8</button>
+            <button type="button" class="btn btn-light">9</button>
+            <button type="button" class="btn btn-light">/</button>
+            <!-- Second Row -->
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <!-- Third Row -->
+            <button type="button" class="btn btn-light">4</button>
+            <button type="button" class="btn btn-light">5</button>
+            <button type="button" class="btn btn-light">6</button>
+            <button type="button" class="btn btn-light">x</button>
+            <!-- Third Row -->
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <!-- Fourth Row -->
+            <button type="button" class="btn btn-light">1</button>
+            <button type="button" class="btn btn-light">2</button>
+            <button type="button" class="btn btn-light">3</button>
+            <button type="button" class="btn btn-light">-</button>
+            <!-- Fourth Row -->
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <!-- Fifth Row -->
+            <button type="button" class="btn btn-light">0</button>
+            <button type="button" class="btn btn-light">.</button>
+            <button type="button" class="btn btn-light">%</button>
+            <button type="button" class="btn btn-light">+</button>
+            <!-- Fifth Row -->
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <!-- Sixth Row -->
+            <button type="button" class="btn btn-light btn-block">=</button>
+            <!-- Sixth Row -->
+          </td>
+        </tr>
+        <!-- Buttons -->
+      </table>
+      <!-- Calculator -->
+    </div>
+    <!-- Center column -->
   </div>
-  
+
   <!-- jQuery & Popper.js -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
