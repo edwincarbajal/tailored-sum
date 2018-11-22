@@ -17,21 +17,15 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark">
-    <span class="navbar-brand mb-0 h1">tailoredsum</span>
-  </nav>
-  <!-- Navbar -->
-
   <div class="row no-gutters h-100">
     <!-- Left column -->
-    <div class="col-md-4 col-lg-3 border-right pt-2 d-none d-md-block">
-      <div class="card border-0">
-        <div class="card-body">
+    <div class="col-md-4 col-lg-3 border-right pt-2 d-none d-md-block bg-light">
+      <div class="card border-0 bg-light">
+        <div class="card-body bg-">
           <p class="text-uppercase">Customize</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">
+          <li class="list-group-item bg-light">
 
             <p class="text-uppercase"><strong>Canvas Options</strong></p>
             <small class="text-muted">Background Fill</small>
@@ -53,13 +47,13 @@
               <div class="col"><span id="bg-info" class="canvas-background w-100 border border-info bg-info d-inline-block color-option"></span></div>
             </div>
             <div class="row">
-              <div class="col"><span id="bg-light" class="canvas-background w-100 border border-light bg-light d-inline-block color-option"></span></div>
+              <div class="col"><span id="bg-light" class="canvas-background w-100 border border-dark bg-light d-inline-block color-option"></span></div>
               <div class="col"><span id="bg-dark" class="canvas-background w-100 border border-dark bg-dark d-inline-block color-option"></span></div>
               <div class="col"><span id="bg-white" class="canvas-background w-100 border border-light bg-white d-inline-block color-option"></span></div>
             </div>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-group-item bg-light">
             <p class="text-uppercase"><strong>Calculator Options</strong></p>
 
             <div class="w-100">
@@ -100,88 +94,113 @@
     <!-- Left Column -->
 
     <!-- Center column -->
-    <div id="center_column" data-bg-color="bg-light" class="col-12 col-md-8 col-lg-7 bg-light d-flex align-items-center justify-content-center">
+    <div id="center_column" data-bg-color="bg-primary" class="col-12 col-md-8 col-lg-7 bg-primary d-flex align-items-center justify-content-center">
       <!-- Calculator -->
-      <table class="border-top border-right border-bottom border-left">
-        <!-- Display -->
-        <tr class="display">
-          <td>
-            <h1 id="product-display" class="w-100 display-4 text-right pr-2 mb-0">0</h1>
-            <span id="calculation-span" class="d-block w-100 text-right pr-3 mb-1">0</span>
-          </td>
-        </tr>
-        <!-- Display -->
+      <div id="calculator-container" class="rounded border bg-light">
+        <table class="bg-light table table-bordered table-sm m-0">
+          <tbody>
+            <!-- Display -->
+            <tr class="display bg-dark text-white">
+              <td colspan="4">
+                <h1 id="product-display" class="display-4 text-right pr-2 mb-0">0</h1>
+                <span id="calculation-span" class="d-block text-right pr-3 mb-1">0</span>
+              </td>
+            </tr>
+            <!-- Display -->
 
-        <!-- Buttons -->
-        <tr>
-          <td class="pt-1">
-            <!-- First Row -->
-            <button type="button" class="btn btn-danger">AC</button>
-            <button type="button" class="btn btn-primary">CE</button>
-            <button type="button" class="btn btn-light">%</button>
-            <button type="button" class="operation-button btn btn-light">/</button>
-            <!-- First Row -->
-          </td>
-        </tr>
+            <!-- Buttons -->
+            <tr>
+              <!-- First Row -->
+              <td>
+                <button type="button" class="btn btn-danger">AC</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary">CE</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-light">%</button>
+              </td>
+              <td>
+                <button type="button" class="operation-button btn btn-info">/</button>
+              </td>
+              <!-- First Row -->
+            </tr>
 
-        <tr>
-          <td>
-            <!-- Second Row -->
-            <button type="button" class="number-button btn btn-light">7</button>
-            <button type="button" class="number-button btn btn-light">8</button>
-            <button type="button" class="number-button btn btn-light">9</button>
-            <button type="button" class="operation-button btn btn-light">*</button>
-            <!-- Second Row -->
-          </td>
-        </tr>
+            <tr>
+              <!-- Second Row -->
+              <td>
+                <button type="button" class="number-button btn btn-light">7</button>
+              </td>
+              <td>
+                <button type="button" class="number-button btn btn-light">8</button>
+              </td>
+              <td>
+                <button type="button" class="number-button btn btn-light">9</button>
+              </td>
+              <td>
+                <button type="button" class="operation-button btn btn-info">*</button>
+              </td>
+              <!-- Second Row -->
+            </tr>
 
-        <tr>
-          <td>
-            <!-- Third Row -->
-            <button type="button" class="number-button btn btn-light">4</button>
-            <button type="button" class="number-button btn btn-light">5</button>
-            <button type="button" class="number-button btn btn-light">6</button>
-            <button type="button" class="operation-button btn btn-light">-</button>
-            <!-- Third Row -->
-          </td>
-        </tr>
+            <tr>
+              <!-- Third Row -->
+              <td>
+                <button type="button" class="number-button btn btn-light">4</button>
+              </td>
+              <td>
+                <button type="button" class="number-button btn btn-light">5</button>
+              </td>
+              <td>
+                <button type="button" class="number-button btn btn-light">6</button>
+              </td>
+              <td>
+                <button type="button" class="operation-button btn btn-info">-</button>
+              </td>
+              <!-- Third Row -->
+            </tr>
 
-        <tr>
-          <td>
-            <!-- Fourth Row -->
-            <button type="button" class="number-button btn btn-light">1</button>
-            <button type="button" class="number-button btn btn-light">2</button>
-            <button type="button" class="number-button btn btn-light">3</button>
-            <button type="button" class="operation-button btn btn-light">+</button>
-            <!-- Fourth Row -->
-          </td>
-        </tr>
+            <tr>
+              <!-- Fourth Row -->
+              <td>
+                <button type="button" class="number-button btn btn-light">1</button>
+              </td>
+              <td>
+                <button type="button" class="number-button btn btn-light">2</button>
+              </td>
+              <td>
+                <button type="button" class="number-button btn btn-light">3</button>
+              </td>
+              <td>
+                <button type="button" class="operation-button btn btn-info">+</button>
+              </td>
+              <!-- Fourth Row -->
+            </tr>
 
-        <tr>
-          <td class="d-flex">
-            <!-- Fifth Row -->
-            <button type="button" class="number-button btn btn-light flex-grow-1 mr-1">0</button>
-            <button type="button" class="btn btn-light mr-1">.</button>
-            <button type="button" class="btn btn-success">=</button>
-            <!-- Fifth Row -->
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <!-- Sixth Row -->
-            <!-- Sixth Row -->
-          </td>
-        </tr>
-        <!-- Buttons -->
-      </table>
+            <tr>
+              <!-- Fifth Row -->
+              <td colspan="2">
+                <button type="button" class="number-button btn btn-light w-100">0</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-light">.</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-success">=</button>
+              </td>
+              <!-- Fifth Row -->
+            </tr>
+          </tbody>
+          <!-- Buttons -->
+        </table>
+      </div>
       <!-- Calculator -->
     </div>
     <!-- Center column -->
 
     <!-- Right column -->
-    <div class="col-lg-2 border-left pt-2 d-none d-lg-block">
-      <div class="card border-0">
+    <div class="col-lg-2 border-left pt-2 d-none d-lg-block bg-light">
+      <div class="card border-0 bg-light">
         <div class="card-body">
           <p class="text-uppercase">History</p>
         </div>

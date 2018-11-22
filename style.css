@@ -1,7 +1,17 @@
 html, body {
-  height: 95%;
+  height: 100%;
   padding: 0;
   margin: 0
+}
+
+#product-display {
+  width: 233px;
+  overflow-x: auto;
+}
+
+#calculation-span {
+  width: 233px;
+  overflow-x: auto;
 }
 
 .display {
