@@ -22,8 +22,9 @@ calculation_span.addEventListener('DOMSubtreeModified', function() {
   // Check if the last character is equal to a number Or if the last character is equal to 0
   // && return a boolean (true or false) // e.x ('z' === Number) --> false
   // if true, then evaluate the expression
-    // and update the product_display element
-  if(!!parseInt(calculation_span.textContent[calculation_span.textContent.length - 1]) || calculation_span.textContent[calculation_span.textContent.length - 1] === '0') {
-    product_display.textContent = eval(calculation_span.textContent)
+  // and update the product_display element
+  if (!!parseInt(calculation_span.textContent[calculation_span.textContent.length - 1]) || calculation_span.textContent[calculation_span.textContent.length - 1] === '0') {
+    var product = eval(calculation_span.textContent);
+    product_display.textContent = product.toLocaleString();
   }
 })
