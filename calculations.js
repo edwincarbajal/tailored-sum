@@ -13,18 +13,23 @@ document.querySelectorAll(".number-button").forEach(function(button) {
 
 document.querySelectorAll(".operation-button").forEach(function(button) {
   button.addEventListener("click", function() {
-    calculation_span.textContent += ' ' + button.textContent + ' '
+    // Store the last index of the calculation_span in a variable for readability
+    const last_index = calculation_span.textContent.length - 1;
+    // If the last character is a number or a 0
+    if (parseInt(calculation_span.textContent[last_index]) || calculation_span.textContent[last_index] === '0') {
+      // append the operation button to the string
+      calculation_span.textContent += ' ' + button.textContent + ' '
+    }
+    // if not, don't do anything
   })
 })
 
 calculation_span.addEventListener('DOMSubtreeModified', function() {
-  // Find the last character in the calculation_span string // e.x ('1 + z') --> the last character is 'z'
-  // Check if the last character is equal to a number Or if the last character is equal to 0
-  // && return a boolean (true or false) // e.x ('z' === Number) --> false
-  // if true, then evaluate the expression
-  // and update the product_display element
-  if (!!parseInt(calculation_span.textContent[calculation_span.textContent.length - 1]) || calculation_span.textContent[calculation_span.textContent.length - 1] === '0') {
-    var product = eval(calculation_span.textContent);
-    product_display.textContent = product.toLocaleString();
+  const last_index = calculation_span.textContent.length - 1;
+  // If the last character is a number or a 0
+  if (parseInt(calculation_span.textContent[last_index]) || calculation_span.textContent[last_index] === '0') {
+    // then evaluate the expression && format the string
+    product_display.textContent = eval(calculation_span.textContent).toLocaleString();
   }
+  // if not, don't do anything
 })
