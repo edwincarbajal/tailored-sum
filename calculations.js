@@ -35,8 +35,8 @@ decimal_operator.addEventListener("click", function() {
 
   // If the last character is a number OR equal to 0
   if (parseInt(last_character) || last_character === '0') {
-    // Split calculations into array
-    const seperated_calculations = calculation_span.textContent.split(' ');
+    // Split the string into an array when it matches a math operator
+    const seperated_calculations = calculation_span.textContent.split(/[\s()*/%+-]+/);
     // Find last index of array
     const last_index_in_array = seperated_calculations.length -1;
     // If the string at the last index does not include a '.'
