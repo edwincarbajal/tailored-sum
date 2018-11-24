@@ -23,7 +23,7 @@ document.querySelectorAll(".operation-button").forEach(function(button) {
     // If the last character is a number or a 0
     if (parseInt(calculation_span.textContent[last_index]) || calculation_span.textContent[last_index] === '0') {
       // append the operation button to the string
-      calculation_span.textContent += ' ' + button.textContent + ' '
+      calculation_span.textContent += button.textContent
     }
   })
 })
@@ -67,7 +67,6 @@ percent_operator.addEventListener("click", function() {
     calculation_span.textContent = seperated_calculations.join(' ');
   }
 })
-
 
 calculation_span.addEventListener('DOMSubtreeModified', function() {
   const last_index = calculation_span.textContent.length - 1;
