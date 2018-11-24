@@ -4,6 +4,10 @@ html, body {
   margin: 0
 }
 
+#left-column {
+  overflow-y: auto;
+}
+
 #product-display {
   width: 233px;
   overflow-x: auto;
@@ -25,4 +29,8 @@ button {
 
 .color-option {
   height: 25px;
+}
+
+.pointer {
+  cursor: pointer;
 }

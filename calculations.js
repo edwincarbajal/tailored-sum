@@ -1,5 +1,5 @@
 var calculation_span = document.getElementById("calculation-span")
-var product_display  = document.getElementById("product-display")
+var product_display = document.getElementById("product-display")
 var decimal_operator = document.getElementById("decimal-operator")
 var percent_operator = document.getElementById("percent-operator")
 
@@ -38,9 +38,9 @@ decimal_operator.addEventListener("click", function() {
     // Split the string into an array when it matches a math operator
     const seperated_calculations = calculation_span.textContent.split(/[\s()*/%+-]+/);
     // Find last index of array
-    const last_index_in_array = seperated_calculations.length -1;
+    const last_index_in_array = seperated_calculations.length - 1;
     // If the string at the last index does not include a '.'
-    if(!seperated_calculations[last_index_in_array].includes('.')) {
+    if (!seperated_calculations[last_index_in_array].includes('.')) {
       // append a '.' to the string
       calculation_span.textContent += '.'
     }
@@ -54,11 +54,11 @@ decimal_operator.addEventListener("click", function() {
 percent_operator.addEventListener("click", function() {
   const last_index = calculation_span.textContent.length - 1;
   // If the last character is a number OR a 0
-  if(parseInt(calculation_span.textContent[last_index]) || calculation_span.textContent[last_index] === '0') {
+  if (parseInt(calculation_span.textContent[last_index]) || calculation_span.textContent[last_index] === '0') {
     // Split calculations into array
     const seperated_calculations = calculation_span.textContent.split(' ');
     // Find last index of array
-    const last_index_in_array = seperated_calculations.length -1;
+    const last_index_in_array = seperated_calculations.length - 1;
     // Store the number at the last index in a variable for readability
     const last_number = seperated_calculations[last_index_in_array];
     // Change the last number into a decimal and store at the last index
@@ -78,7 +78,7 @@ calculation_span.addEventListener('DOMSubtreeModified', function() {
 })
 
 // AC function
-document.getElementById("all-clear") .addEventListener("click", function() {
+document.getElementById("all-clear").addEventListener("click", function() {
   calculation_span.textContent = '0';
 })
 
@@ -86,7 +86,7 @@ document.getElementById("all-clear") .addEventListener("click", function() {
 document.getElementById("clear-entry").addEventListener("click", function() {
   var str = calculation_span.textContent;
   calculation_span.textContent = str.substring(0, str.length - 1);
-  if (str.length === 1){
+  if (str.length === 1) {
     calculation_span.textContent = '0';
   }
 })
