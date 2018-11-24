@@ -77,3 +77,17 @@ calculation_span.addEventListener('DOMSubtreeModified', function() {
     product_display.textContent = eval(calculation_span.textContent).toLocaleString();
   }
 })
+
+// AC function
+document.getElementById("all-clear") .addEventListener("click", function() {
+  calculation_span.textContent = '0';
+})
+
+//CE function
+document.getElementById("clear-entry").addEventListener("click", function() {
+  var str = calculation_span.textContent;
+  calculation_span.textContent = str.substring(0, str.length - 1);
+  if (str.length === 1){
+    calculation_span.textContent = '0';
+  }
+})
