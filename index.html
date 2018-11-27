@@ -21,7 +21,7 @@
     <!-- Left column -->
     <div id="left-column" class="col-md-4 col-lg-3 border-right pt-2 d-none d-md-block bg-light">
       <div class="card border-0 bg-light">
-        <div class="card-body bg-">
+        <div class="card-body bg-light">
           <p class="text-uppercase">Customize</p>
         </div>
         <ul class="list-group list-group-flush">
@@ -289,6 +289,28 @@
         <div class="card-body">
           <p class="text-uppercase">History</p>
         </div>
+        <ul id="history-list-container" class="list-group list-group-flush">
+          <script type="text/javascript">
+            if(localStorage.math) {
+              let previous_operations = JSON.parse(localStorage.getItem('math'))
+              Object.entries(previous_operations).forEach(([key, value]) => {
+                document.getElementById('history-list-container').innerHTML +=
+                `<li class="list-group-item bg-light text-right">
+                  <div class="w-100">
+                    <small>${ value }</small>
+                    <div class="row pt-2">
+                      <div class="col">
+                        ${ key }
+                      </div>
+                    </div>
+                  </div>
+                </li>`
+              })
+            } else {
+              document.getElementById('history-list-container').innerHTML += '<li id="no-history" class="list-group-item bg-light text-center">No History! Try a math operation and pressing the equals button :(</li>'
+            }
+          </script>
+        </ul>
       </div>
     </div>
     <!-- Right column -->
@@ -302,6 +324,7 @@
   <!-- Custom Javascript -->
   <script src="./calculations.js"></script>
   <script src="./customization.js"></script>
+  <script src="./history.js"></script>
 </body>
 
 </html>
