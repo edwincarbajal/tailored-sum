@@ -4,7 +4,7 @@ var clear_entry_buttons = document.querySelectorAll('.ce-background');
 var operator_button_options = document.querySelectorAll('.operator-background');
 var equals_button_options = document.querySelectorAll('.equals-background');
 var theme_options = document.querySelectorAll('.calculator-background');
-var display_options = document.querySelectorAll('.dispay-background');
+var display_options = document.querySelectorAll('.display-background');
 
 
 var center_column = document.getElementById("center_column");
@@ -12,7 +12,7 @@ var all_clear_button = document.getElementById("all-clear");
 var clear_entry_button = document.getElementById("clear-entry");
 var equals_button = document.getElementById("equals-button");
 var operator_buttons = document.querySelectorAll(".operation-button");
-var calculator_theme = document.getElementById("calcualtor-theme");
+var calculator_theme = document.getElementById("calculator-theme");
 var display_screen = document.getElementById("display-screen");
 
 function addOrRemoveClassName(element, button_id) {
