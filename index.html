@@ -70,24 +70,24 @@
             <div class="w-100">
               <small class="">Theme</small>
               <div class="row pt-2">
-                <div class="col"><span class="w-100 border border-success bg-success d-inline-block color-option pointer"></span></div>
-                <div class="col"><span class="w-100 border border-primary bg-primary d-inline-block color-option pointer"></span></div>
-                <div class="col"><span class="w-100 border border-warning bg-warning d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-success" class="calculator-background w-100 border border-success bg-success d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-primary" class="calculator-background w-100 border border-primary bg-primary d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-warning" class="calculator-background w-100 border border-warning bg-warning d-inline-block color-option pointer"></span></div>
               </div>
 
               <div class="row">
-                <div class="col"><span class="w-100 border border-danger bg-danger d-inline-block color-option pointer"></span></div>
-                <div class="col"><span class="w-100 border border-info bg-info d-inline-block color-option pointer"></span></div>
-                <div class="col"><span class="w-100 border border-dark bg-dark d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-danger"class="calculator-background w-100 border border-danger bg-danger d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-info"  class="calculator-background w-100 border border-info bg-info d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-dark"  class="calculator-background w-100 border border-dark bg-dark d-inline-block color-option pointer"></span></div>
               </div>
             </div>
 
             <div class="w-100 pt-2">
               <small class="">Display</small>
               <div class="row pt-2">
-                <div class="col"><span class="w-100 border border-secondary bg-light d-inline-block color-option pointer"></span></div>
-                <div class="col"><span class="w-100 border border-dark bg-dark d-inline-block color-option pointer"></span></div>
-                <div class="col"><span class="w-100 border border-white bg-white d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-light" class="dispay-background w-100 border border-secondary bg-light d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-dark"  class="dispay-background w-100 border border-dark bg-dark d-inline-block color-option pointer"></span></div>
+                <div class="col"><span id="bg-white" class="dispay-background w-100 border border-white bg-white d-inline-block color-option pointer"></span></div>
               </div>
             </div>
 
@@ -182,10 +182,10 @@
     <div id="center_column" data-bg-color="bg-info" class="col-12 col-md-8 col-lg-7 bg-info d-flex align-items-center justify-content-center">
       <!-- Calculator -->
       <div id="calculator-container" class="rounded border bg-light">
-        <table class="bg-light table table-bordered table-sm m-0">
+        <table id="calcualtor-theme" data-bg-color="bg-light" class="bg-light table table-bordered table-sm m-0">
           <tbody>
             <!-- Display -->
-            <tr class="display bg-dark text-white">
+            <tr id="display-screen" data-bg-color="bg-dark" class="display bg-dark text-grey">
               <td colspan="4">
                 <h1 id="product-display" class="display-4 text-right pr-2 mb-0">0</h1>
                 <span id="calculation-span" class="d-block text-right pr-3 mb-1">0</span>
