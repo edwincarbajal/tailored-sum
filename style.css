@@ -4,19 +4,17 @@ html, body {
   margin: 0
 }
 
-#left-column {
+#left-column, #right-column {
   overflow-y: auto;
 }
 
-#product-display {
+#product-display , #calculation-span {
   width: 233px;
   overflow-x: auto;
 }
 
 #calculation-span {
-  width: 233px;
   letter-spacing: 3px;
-  overflow-x: auto;
 }
 
 .display {
